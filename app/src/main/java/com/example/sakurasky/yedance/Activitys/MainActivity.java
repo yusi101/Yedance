@@ -14,7 +14,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.sakurasky.yedance.Fragments.Fragment1;
-import com.example.sakurasky.yedance.Fragments.Fragment2;
+import com.example.sakurasky.yedance.Fragments.ListImgsFragment;
 import com.example.sakurasky.yedance.Fragments.Fragment3;
 import com.example.sakurasky.yedance.Fragments.Fragment4;
 import com.example.sakurasky.yedance.R;
@@ -52,7 +52,7 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         ViewUtils.inject(this);
         mViewPager.setCurrentItem(0);
@@ -62,7 +62,7 @@ public class MainActivity extends FragmentActivity {
     private void initView() {
         mFragment = new ArrayList<Fragment>();
         Fragment rb1Fragment = new Fragment1();
-        Fragment rb2Fragment = new Fragment2();
+        Fragment rb2Fragment = new ListImgsFragment();
         Fragment rb3Fragment = new Fragment3();
         Fragment rb4Fragment = new Fragment4();
         mFragment.add(rb1Fragment);

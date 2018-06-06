@@ -10,10 +10,13 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
 
-import com.example.sakurasky.yedance.Adapters.ListAdapter;
+import com.example.sakurasky.yedance.Adapters.NewsListAdapter;
 import com.example.sakurasky.yedance.Adapters.MyGridAdapterf4;
 import com.example.sakurasky.yedance.R;
+import com.example.sakurasky.yedance.Views.ImageCycleView;
+import com.lidroid.xutils.view.annotation.ViewInject;
 
+import com.example.sakurasky.yedance.Model.DataManager.PartyCommittee;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,14 +37,13 @@ public class Fragment4 extends Fragment {
          v = inflater.inflate(R.layout.activity_fragment4, container, false);
         gvShow();
         ListView lv = (ListView)v.findViewById(R.id.lisrvwe);
-        List<String> list = new ArrayList<>();
-
-        ListAdapter adapter = new ListAdapter(getActivity(),list);
+        List<PartyCommittee> list = new ArrayList<>();
+        NewsListAdapter adapter = new NewsListAdapter(getActivity(),list);
         lv.setAdapter(adapter);
         return v;
     }
     public void gvShow(){
-        GridView gridView= (GridView) v.findViewById(R.id.gridview);
+        GridView gridView = (GridView)v.findViewById(R.id.gridview);
         MyGridAdapterf4 adapter=new MyGridAdapterf4(getActivity(),text1,null,imgs);
         gridView.setAdapter(adapter);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

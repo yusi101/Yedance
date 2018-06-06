@@ -10,7 +10,7 @@ import com.example.sakurasky.yedance.R;
  * 喵语界面
  * @author yusi
  */
-public class InformationActivity extends AppCompatActivity {
+public class InformationActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

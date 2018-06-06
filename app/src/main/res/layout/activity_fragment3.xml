@@ -5,9 +5,11 @@
     android:orientation="vertical"
     tools:context=".Fragments.Fragment3">
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="第3个Fragment"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="请输入关键字"
+        android:background="@drawable/searchstyle"
+        />
 </LinearLayout>

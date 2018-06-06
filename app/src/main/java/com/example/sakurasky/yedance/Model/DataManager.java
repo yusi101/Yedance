@@ -10,11 +10,11 @@ public class DataManager {
      * list的信息类
      */
     public static class PartyCommittee{
-        public int imageView;//右边图片
+        public String imageView;//右边图片
         public String title;//标题
-        public String context;//内容
+        public String content;//内容
         public String  browse;//浏览数
         public String time;//
-
+        public int type;//类型
     }
 }
